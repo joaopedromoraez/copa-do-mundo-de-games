@@ -5,6 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'Copa-Do-Mundo-De-Games-Lambda3';
-}
+export class AppComponent {}
