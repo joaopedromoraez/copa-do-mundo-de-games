@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
-import { Game } from './models/game';
+import { Game } from '@shared/models/game';
 import { Lambda3Service } from './services/lambda3.service';
 import { SelectionModel } from '@angular/cdk/collections';
 

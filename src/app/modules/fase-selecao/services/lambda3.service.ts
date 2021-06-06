@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Game } from 'src/app/modules/fase-selecao/models/game';
+import { Game } from '@shared/models/game';
 import { environment } from 'src/environments/environment';
 
 @Injectable()
