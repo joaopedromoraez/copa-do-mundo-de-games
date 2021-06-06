@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Game } from 'src/app/modules/fase-selecao/models/game';
 import { environment } from 'src/environments/environment';
 
 @Injectable()
@@ -10,7 +11,7 @@ export class Lambda3Service {
     private http: HttpClient,
   ) { }
 
-  getGames(): Observable<any>{
-    return this.http.get(`${environment.API_LAMBDA3}/Competidores?copa=games`)
+  getGames(): Observable<Game[]>{
+    return this.http.get<Game[]>(`${environment.API_LAMBDA3}/Competidores?copa=games`)
   }
 }
