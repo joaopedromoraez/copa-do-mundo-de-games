@@ -4,57 +4,65 @@
     </mat-toolbar-row>
 </mat-toolbar>
 
-<div class="mat-elevation-z8">
-    <mat-toolbar>
-        <span>Games Selecionados: {{selection.selected.length}}</span>
-        <span class="spacer"></span>
-        <button mat-raised-button color="primary">
-            Gerar Meu Campeonato
-        </button>
-    </mat-toolbar>
-
-    <mat-divider></mat-divider>
-
-    <table mat-table [dataSource]="games" matSort>
-
-        <!-- Selection Column -->
-        <ng-container matColumnDef="select">
-            <th mat-header-cell *matHeaderCellDef> Selecione </th>
-            <td mat-cell *matCellDef="let row">
-                <mat-checkbox (click)="$event.stopPropagation()"
-                              (change)="$event ? selection.toggle(row) : null"
-                              [checked]="selection.isSelected(row)"
-                              [disabled]="!selection.isSelected(row) && this.selection.selected.length === 8">
-                </mat-checkbox>
-            </td>
-        </ng-container>
-
-        <!-- ID Column -->
-        <ng-container matColumnDef="id">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header> Plataforma </th>
-            <td mat-cell *matCellDef="let row"> {{consoleName(row.id)}} </td>
-        </ng-container>
-
-        <!-- Titulo Column -->
-        <ng-container matColumnDef="titulo">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header> Titulo </th>
-            <td mat-cell *matCellDef="let row"> {{row.titulo}}</td>
-        </ng-container>
-
-        <!-- Nota Column -->
-        <ng-container matColumnDef="nota">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header> Nota </th>
-            <td mat-cell *matCellDef="let row"> {{row.nota}} </td>
-        </ng-container>
-
-        <!-- Ano Column -->
-        <ng-container matColumnDef="ano">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header> Ano </th>
-            <td mat-cell *matCellDef="let row"> {{row.ano}} </td>
-        </ng-container>
-
-        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-
-    </table>
+<div class="content">
+    <div class="mat-elevation-z12">
+        <mat-toolbar>
+            <span>Games Selecionados: {{selection.selected.length}}</span>
+            <span class="spacer"></span>
+            <button
+                mat-raised-button
+                [disabled]="this.selection.selected.length !== 8"
+                color="primary"
+                (click)="gerarMeuCampeonato()">
+                Gerar Meu Campeonato
+            </button>
+        </mat-toolbar>
+    
+        <mat-divider></mat-divider>
+    
+        <table mat-table [dataSource]="games" matSort>
+    
+            <!-- Selection Column -->
+            <ng-container matColumnDef="select">
+                <th mat-header-cell *matHeaderCellDef> Selecione </th>
+                <td mat-cell *matCellDef="let row">
+                    <mat-checkbox
+                        (click)="$event.stopPropagation()"
+                        color="primary"
+                        (change)="$event ? selection.toggle(row) : null"
+                        [checked]="selection.isSelected(row)"
+                        [disabled]="!selection.isSelected(row) && this.selection.selected.length === 8">
+                    </mat-checkbox>
+                </td>
+            </ng-container>
+    
+            <!-- ID Column -->
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Plataforma </th>
+                <td mat-cell *matCellDef="let row"> {{consoleName(row.id)}} </td>
+            </ng-container>
+    
+            <!-- Titulo Column -->
+            <ng-container matColumnDef="titulo">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Titulo </th>
+                <td mat-cell *matCellDef="let row"> {{row.titulo}}</td>
+            </ng-container>
+    
+            <!-- Nota Column -->
+            <ng-container matColumnDef="nota">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Nota </th>
+                <td mat-cell *matCellDef="let row"> {{row.nota}} </td>
+            </ng-container>
+    
+            <!-- Ano Column -->
+            <ng-container matColumnDef="ano">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Ano </th>
+                <td mat-cell *matCellDef="let row"> {{row.ano}} </td>
+            </ng-container>
+    
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    
+        </table>
+    </div>
 </div>

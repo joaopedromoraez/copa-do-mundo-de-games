@@ -4,6 +4,8 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Game } from '@shared/models/game';
 import { Lambda3Service } from './services/lambda3.service';
 import { SelectionModel } from '@angular/cdk/collections';
+import { DataService } from '@shared/services/data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-fase-selecao',
@@ -22,6 +24,8 @@ export class FaseSelecaoComponent implements OnInit {
 
   constructor(
     readonly service: Lambda3Service,
+    private storage: DataService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -34,6 +38,12 @@ export class FaseSelecaoComponent implements OnInit {
             .split('-')
             .map(name=>`${name[0].toUpperCase()}${name.substring(1)}`)
             .join(' ')
+  }
+
+  gerarMeuCampeonato() {
+    this.storage.clear();
+    this.storage.set('GAMES_SELECTED', this.selection.selected);
+    this.router.navigateByUrl('/resultado-final')
   }
 
 }
