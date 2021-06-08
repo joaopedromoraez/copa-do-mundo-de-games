@@ -39,25 +39,37 @@
             <!-- ID Column -->
             <ng-container matColumnDef="id">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header> Plataforma </th>
-                <td mat-cell *matCellDef="let row"> {{consoleName(row.id)}} </td>
+                <td mat-cell *matCellDef="let row">
+                    <span class="mobile-label">Plataforma:</span>
+                    <div> {{consoleName(row.id)}} </div>
+                </td>
             </ng-container>
     
             <!-- Titulo Column -->
             <ng-container matColumnDef="titulo">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header> Titulo </th>
-                <td mat-cell *matCellDef="let row"> {{row.titulo}}</td>
+                <td mat-cell *matCellDef="let row">
+                    <span class="mobile-label">Titulo:</span>
+                    <div> {{row.titulo}} </div>
+                </td>
             </ng-container>
     
             <!-- Nota Column -->
             <ng-container matColumnDef="nota">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header> Nota </th>
-                <td mat-cell *matCellDef="let row"> {{row.nota}} </td>
+                <td mat-cell *matCellDef="let row">
+                    <span class="mobile-label">Nota:</span>
+                    <div> {{row.nota}} </div>
+                </td>
             </ng-container>
     
             <!-- Ano Column -->
             <ng-container matColumnDef="ano">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header> Ano </th>
-                <td mat-cell *matCellDef="let row"> {{row.ano}} </td>
+                <td mat-cell *matCellDef="let row">
+                    <span class="mobile-label">Ano:</span>
+                    <div> {{row.ano}} </div>
+                </td>
             </ng-container>
     
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

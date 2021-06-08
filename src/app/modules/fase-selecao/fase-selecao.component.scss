@@ -5,3 +5,66 @@ table {
 .content {
   padding: 2em;
 }
+
+.mobile-label {
+  display: none;
+}
+
+@media(max-width: 767px) {
+  .content{
+    padding: 1em;
+    mat-toolbar {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      padding: 1em;
+      button {
+        margin-top: 0.5em;
+      }
+    }
+  }
+
+  .mobile-label {
+    display: inline-flex;
+    font-weight: bold;
+  }
+
+  .mat-header-row {
+    display: none;
+  }
+
+  .mat-row {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-style: none none solid none;
+    border-width: 5px;
+    border-bottom-color: #0000001f;
+    height: auto;
+    &:last-of-type {
+      border-style: none;
+    }
+  }
+
+  .mat-cell {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  td.mat-cell{
+    div {
+      text-align: right;
+    }
+    &:first-of-type {
+      padding-left: 0px;
+      padding-bottom: 14px;
+    }
+    &:last-of-type {
+      border-style: none;
+    }
+  }
+
+}
