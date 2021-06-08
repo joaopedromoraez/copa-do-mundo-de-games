@@ -6,7 +6,7 @@
 
 Demonstração de como implementar dark mode em aplicações Angular :smile:
 
-<!-- ![Alt text](src/assets/screenshot.gif "Screenshot") -->
+![Alt text](src/assets/screenshot.gif "Screenshot")
 
 ## Tecnologias utilizadas :memo:
 
