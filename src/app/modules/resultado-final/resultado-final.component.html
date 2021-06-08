@@ -1,11 +1,17 @@
 <mat-toolbar color="primary">
     <span>Challenge Games - Resultado Final</span>
     <span class="spacer"></span>
-    <button mat-raised-button color="accent" routerLink ="/fase-selecao">
+    <button mat-raised-button color="accent" routerLink="/fase-selecao">
         Voltar para fase de seleção
     </button>
 </mat-toolbar>
 
-<div class="wrapper">
-    <app-torneio *ngFor="let item of winnerLevel" [item]="item"></app-torneio>
-</div>
+<mat-drawer-container>
+    <mat-drawer-content>
+
+        <div class="scroll">
+            <app-torneio *ngFor="let item of winnerLevel" [item]="item"></app-torneio>
+        </div>
+
+    </mat-drawer-content>
+</mat-drawer-container>
