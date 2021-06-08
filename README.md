@@ -4,7 +4,7 @@
 
 ## :rocket: Sobre a aplicação
 
-Demonstração de como implementar dark mode em aplicações Angular :smile:
+Desafio Técnico "Copa do Mundo de Games Lambda3" implementado em Angular versão 11 :smile:
 
 ![Alt text](src/assets/screenshot.gif "Screenshot")
 
