@@ -59,16 +59,6 @@ export class ResultadoFinalComponent implements OnInit {
     });
   }
 
-  matchProp(a, b, prop) {
-    if (a[prop] > b[prop]) {
-      return [a, b];
-    }
-    if (a[prop] < b[prop]) {
-      return [b, a];
-    }
-    return false;
-  }
-
   matchUp(games) {
     return Array.from({ length: Math.floor(games.length / 2) }, (_, i) => [
       games[i],
@@ -81,6 +71,16 @@ export class ResultadoFinalComponent implements OnInit {
       games[i * 2],
       games[i * 2 + 1],
     ]);
+  }
+
+  matchProp(a, b, prop) {
+    if (a[prop] > b[prop]) {
+      return [a, b];
+    }
+    if (a[prop] < b[prop]) {
+      return [b, a];
+    }
+    return false;
   }
 
   matchNameOrder(a, b, prop) {
