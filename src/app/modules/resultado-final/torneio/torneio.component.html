@@ -1,0 +1,11 @@
+<div class="item">
+    <div class="item-parent">
+        <p>{{ item.winner.titulo }} ({{ item.winner.ano }})</p>
+    </div>
+
+    <div class="item-childrens">
+        <div *ngFor="let child of item.children" class="item-child">
+            <app-torneio [item]="child"></app-torneio>
+        </div>
+    </div>
+</div>
