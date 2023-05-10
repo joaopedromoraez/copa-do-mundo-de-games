@@ -1,10 +1,10 @@
 <h1 align="center">
-    Copa Do Mundo De Games Lambda3
+    Copa Do Mundo De Games
 </h1>
 
 ## :rocket: Sobre a aplicação
 
-Desafio Técnico "Copa do Mundo de Games Lambda3" implementado em Angular versão 11 :smile:
+Desafio Técnico "Copa do Mundo de Games" implementado em Angular versão 11 :smile:
 
 ![Alt text](src/assets/screenshot.gif "Screenshot")
 
@@ -30,15 +30,15 @@ npm install -g @angular/cli
 Agora clone este repositório.
 
 ```
-git clone https://github.com/joaopedromoraez/copa-do-mundo-de-games-lambda3
+git clone https://github.com/joaopedromoraez/copa-do-mundo-de-games
 ```
 
-Entre na pasta `copa-do-mundo-de-games-lambda3` e rode o comando `yarn` ou `npm install`, para instalar as dependências do projeto.
+Entre na pasta `copa-do-mundo-de-games` e rode o comando `yarn` ou `npm install`, para instalar as dependências do projeto.
 
 Agora é só rodar o comando `ng serve` dentro da pasta do projeto !
 
 ```
-cd copa-do-mundo-de-games-lambda3
+cd copa-do-mundo-de-games
 
 ng serve
 ```
