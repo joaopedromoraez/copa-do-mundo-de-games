@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build-gh-pages": "ng build --prod --base-href=/copa-do-mundo-de-games/"
+    "build-gh-pages": "ng build --prod --base-href=https://joaopedromoraez.github.io/copa-do-mundo-de-games/"
   },
   "private": true,
   "dependencies": {
